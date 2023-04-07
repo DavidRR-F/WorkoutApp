@@ -17,6 +17,13 @@ Create a Mobile Application that allows users to create workouts and with progre
 - Prisma
 - PlanetScale
 
+## Development Time
+
+| Activity          | Time       | Date     |
+|:------------------|:-----------|:---------|
+| Scetch Designing  | 1hr 30min  | 4/7/2023 |
+| Database Creation | 30min      | 4/7/2023 |
+
 # Step 1. Sketch Application Design
 
 ## Frontend Scetch
@@ -121,3 +128,5 @@ Overload Strategy Table (1-to-1 with Set)
 | :------------ |:-------------|:---------------|:------------|:---------------|
 | 1             | 1            | 8              | 12          | 5              |
 | 2             | 2            | 10             | 20          | 5              |
+
+
