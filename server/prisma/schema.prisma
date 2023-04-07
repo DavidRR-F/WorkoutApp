@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  //relationMode = "prisma"
+}
+
+model user {
+  userId        Int      @id @default(autoincrement())
+  userFirstName String
+  userLastName  String
+  userEmail     String   @unique
+  workouts      workout[]
+}
+
+model workout {
+  workoutId   Int       @id @default(autoincrement())
+  userId      Int
+  workoutName String
+  user        user      @relation(fields: [userId], references: [userId])
+  exercises   exercise[]
+}
+
+model exercise {
+  exerciseId   Int             @id @default(autoincrement())
+  workoutId    Int
+  exerciseName String
+  workout      workout         @relation(fields: [workoutId], references: [workoutId])
+  sets         sets?
+  overloadStrategy overloadStrategy?
+}
+
+model sets {
+  setId       Int      @id @default(autoincrement())
+  exerciseId  Int @unique
+  sets        Int
+  reps        Int
+  weight      Float
+  exercise    exercise @relation(fields: [exerciseId], references: [exerciseId])
+}
+
+model overloadStrategy {
+  overLoadId     Int       @id @default(autoincrement())
+  exerciseId     Int @unique
+  repRangeBottom Int
+  repRangeTop    Int
+  weightIncrease Float
+  exercise       exercise  @relation(fields: [exerciseId], references: [exerciseId])
+}

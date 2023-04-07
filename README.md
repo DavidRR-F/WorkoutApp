@@ -13,6 +13,7 @@ Create a Mobile Application that allows users to create workouts and with progre
 ## Stack 
 - React Native (Maybe Expo)
 - Tailwind CSS
+- Express
 - tRPC
 - Prisma
 - PlanetScale
@@ -22,7 +23,10 @@ Create a Mobile Application that allows users to create workouts and with progre
 | Activity          | Time       | Date     |
 |:------------------|:-----------|:---------|
 | Scetch Designing  | 1hr 30min  | 4/7/2023 |
-| Database Creation | 30min      | 4/7/2023 |
+| PlanetScale DB    | 30min      | 4/7/2023 |
+| Config Prisma     | 1hr 15min  | 4/7/2023 |
+| Express API       | 30min      | 4/7/2023 |
+| Debug Runtime     | 2hr        | 4/7/2023 |
 
 # Step 1. Sketch Application Design
 
