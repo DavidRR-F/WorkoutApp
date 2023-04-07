@@ -11,7 +11,8 @@ Note: I am also building this because I'm stuborn and refuse $20 a month for an 
 Create a Mobile Application that allows users to create workouts and with progressive overload functionality. When the user completes a workout full, increase the number of reps and/or weight used in the exercise specified by the user
 
 ## Stack 
-- React Native (Maybe Expo)
+- React Native
+- Expo
 - Tailwind CSS
 - Express
 - tRPC
@@ -27,6 +28,7 @@ Create a Mobile Application that allows users to create workouts and with progre
 | Config Prisma     | 1hr 15min  | 4/7/2023 |
 | Express API       | 30min      | 4/7/2023 |
 | Debug Runtime     | 2hr        | 4/7/2023 |
+| Setup tRPC        | 1hr        | 4/7/2023 |
 
 # Step 1. Sketch Application Design
 
