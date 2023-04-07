@@ -45,7 +45,39 @@ Create a Mobile Application that allows users to create workouts and with progre
 
 ### Endpoints
 
+#### Users
 
+- `GET /users` - List all users
+- `GET /users/:userId` - Retrieve a specific user by ID
+- `POST /users` - Create a new user
+- `PUT /users/:userId` - Update an existing user by ID
+- `DELETE /users/:userId` - Delete a user by ID
+
+#### Workouts
+
+- `GET /users/:userId/workouts` - List all workouts for a user
+- `GET /users/:userId/workouts/:workoutId` - Retrieve a specific workout by ID
+- `POST /users/:userId/workouts` - Create a new workout for a user
+- `PUT /users/:userId/workouts/:workoutId` - Update an existing workout by ID
+- `DELETE /users/:userId/workouts/:workoutId` - Delete a workout by ID
+
+#### Exercises
+
+- `GET /workouts/:workoutId/exercises` - List all exercises for a workout
+- `GET /workouts/:workoutId/exercises/:exerciseId` - Retrieve a specific exercise by ID
+- `POST /workouts/:workoutId/exercises` - Create a new exercise for a workout
+- `PUT /workouts/:workoutId/exercises/:exerciseId` - Update an existing exercise by ID
+- `DELETE /workouts/:workoutId/exercises/:exerciseId` - Delete an exercise by ID
+
+#### Sets
+
+- `GET /exercises/:exerciseId/sets` - Retrieve the set information for an exercise
+- `PUT /exercises/:exerciseId/sets` - Update the set information for an exercise
+
+#### Overload Strategies
+
+- `GET /exercises/:exerciseId/overload` - Retrieve the overload strategy for an exercise
+- `PUT /exercises/:exerciseId/overload` - Update the overload strategy for an exercise
 
 ### Database Structure
 
