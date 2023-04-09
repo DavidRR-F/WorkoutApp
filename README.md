@@ -17,18 +17,7 @@ Create a Mobile Application that allows users to create workouts and with progre
 - Express
 - tRPC
 - Prisma
-- PlanetScale
-
-## Development Time
-
-| Activity          | Time       | Date     |
-|:------------------|:-----------|:---------|
-| Scetch Designing  | 1hr 30min  | 4/7/2023 |
-| PlanetScale DB    | 30min      | 4/7/2023 |
-| Config Prisma     | 1hr 15min  | 4/7/2023 |
-| Express API       | 30min      | 4/7/2023 |
-| Debug Runtime     | 2hr        | 4/7/2023 |
-| Setup tRPC        | 1hr        | 4/7/2023 |
+- PlanetScale or Supabse
 
 # Step 1. Sketch Application Design
 

@@ -4,6 +4,16 @@ import { z } from "zod";
 
 
 export const workoutRouter = trpc.router({
+    test: trpc.procedure.query(() => {
+        return prisma.user.findUnique({
+            where: { userId: 1 },
+            select: {
+                userFirstName: true,
+                userLastName: true,
+                userEmail: true
+            }
+        })
+    }),
     workouts: trpc.procedure.input(z.object({userId: z.number()}))
     .mutation(({ input }) => {
         const userId = input.userId;
