@@ -7,5 +7,5 @@ export const Welcome = () => {
 	if (user.data == null) return <Text>loading...</Text>
     if (user.error) return <Text>Error...</Text>
 
-	return <Text>{user.data?.userFirstName}</Text>
+	return <Text>{user.data?.userFirstName} {user.data?.userLastName}</Text>
 }

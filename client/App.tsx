@@ -5,6 +5,7 @@ import { trpc } from './lib/trpc';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import {httpBatchLink} from '@trpc/react-query'
 import { Welcome } from './pages/Welcome';
+import { TRPC_URL } from '@env';
 
 export default function App() {
   const [queryClient] = useState(() => new QueryClient());
@@ -12,7 +13,7 @@ export default function App() {
     trpc.createClient({
       // change the ip address to whatever address the Metro server is running on
       // if you're using a Simulator 'localhost' should work fine
-      links: [httpBatchLink({ url: `http://YOUR_IP_ADDRESS:3000/trpc` })],
+      links: [httpBatchLink({ url: TRPC_URL })],
     }),
   );
 
