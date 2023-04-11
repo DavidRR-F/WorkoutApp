@@ -101,27 +101,10 @@ Workout Table (1-to-Many with User)
 
 Exercise Table (1-to-Many with Workout)
 
-| WokroutId     | ExerciseId | ExerciseName  |
-| :------------ |:-----------|:--------------|
-| 1             | 1          | Deadlift      |
-| 1             | 1          | Split Squats  |
+| WokroutId     | ExerciseId | ExerciseName  | Sets  | Reps | Weight | RepRangeBottom | RepRangeTop | WeightIncrease |
+| :------------ |:-----------|:--------------|:------|:-----|:-------|:---------------|:------------|:---------------|
+| 1             | 1          | Deadlift      | 3     | 10   | 180    | 8              | 12          | 5              |
+| 1             | 1          | Split Squats  | 4     | 12   | 0      | 10             | 20          | 5              |
 
-#### Progressive Overload Info
-
-Set Table (1-to-1 With Exercise)
-
-| ExerciseId    | SetId   | Sets  | Reps | Weight |
-| :------------ |:--------|:------|:-----|:-------|
-| 1             | 1       | 3     | 10   | 180    |
-| 2             | 2       | 4     | 12   | 0      |
-
-Overload Strategy Table (1-to-1 with Set)
-
-- If Reps == RepRangeTop then Weight += WeightIncrease else Reps += 2 
-
-| ExerciseId    | OverLoadId   | RepRangeBottom | RepRangeTop | WeightIncrease |
-| :------------ |:-------------|:---------------|:------------|:---------------|
-| 1             | 1            | 8              | 12          | 5              |
-| 2             | 2            | 10             | 20          | 5              |
 
 
