@@ -5,48 +5,32 @@ generator client {
 datasource db {
   provider     = "sqlite"
   url          = env("DATABASE_URL")
-  //relationMode = "prisma"
 }
 
-model user {
-  userId        Int      @id @default(autoincrement())
-  userFirstName String
-  userLastName  String
-  userEmail     String   @unique
-  workouts      workout[]
+model User {
+    id            Int    @id @default(autoincrement())
+    name          String?
+    email         String?   @unique
+    workouts      Workout[]
 }
 
-model workout {
-  workoutId   Int       @id @default(autoincrement())
+model Workout {
+  id          Int    @id @default(autoincrement())
+  name        String
   userId      Int
-  workoutName String
-  user        user      @relation(fields: [userId], references: [userId])
-  exercises   exercise[]
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  exercises   Exercise[]
 }
 
-model exercise {
-  exerciseId   Int             @id @default(autoincrement())
-  workoutId    Int
-  exerciseName String
-  workout      workout         @relation(fields: [workoutId], references: [workoutId])
-  sets         sets?
-  overloadStrategy overloadStrategy?
-}
-
-model sets {
-  setId       Int      @id @default(autoincrement())
-  exerciseId  Int @unique
-  sets        Int
-  reps        Int
-  weight      Float
-  exercise    exercise @relation(fields: [exerciseId], references: [exerciseId])
-}
-
-model overloadStrategy {
-  overLoadId     Int       @id @default(autoincrement())
-  exerciseId     Int @unique
+model Exercise {
+  id             Int    @id @default(autoincrement())
+  name           String
+  sets           Int
+  reps           Int
+  weight         Int
   repRangeBottom Int
   repRangeTop    Int
-  weightIncrease Float
-  exercise       exercise  @relation(fields: [exerciseId], references: [exerciseId])
+  weightIncrease Int
+  workoutId      Int
+  workout        Workout @relation(fields: [workoutId], references: [id], onDelete: Cascade)
 }
