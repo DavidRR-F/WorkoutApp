@@ -20,8 +20,7 @@
     "nativewind": "^2.0.11",
     "react": "18.2.0",
     "react-native": "0.71.6",
-    "react-native-dotenv": "^3.4.8",
-    "server": "file:../server"
+    "react-native-dotenv": "^3.4.8"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -30,5 +29,16 @@
     "tailwindcss": "^3.3.1",
     "typescript": "^4.9.4"
   },
-  "private": true
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidRR-F/WorkoutApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidRR-F/WorkoutApp/issues"
+  },
+  "homepage": "https://github.com/DavidRR-F/WorkoutApp#readme",
+  "description": ""
 }

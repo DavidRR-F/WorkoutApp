@@ -1,7 +1,6 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,7 +19,7 @@
     "prisma": "^4.12.0",
     "tsc-node": "^0.0.3",
     "tsc-watch": "^6.0.0",
-    "typescript": "^5.0.3"
+    "typescript": "^4.9.4"
   },
   "dependencies": {
     "@prisma/client": "^4.12.0",
@@ -30,5 +29,14 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "zod": "^3.21.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidRR-F/WorkoutApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DavidRR-F/WorkoutApp/issues"
+  },
+  "homepage": "https://github.com/DavidRR-F/WorkoutApp#readme",
+  "description": ""
 }
