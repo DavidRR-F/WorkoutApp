@@ -1,40 +1,29 @@
-import { useState } from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { trpc } from './lib/trpc';
-import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
-import {httpBatchLink} from '@trpc/react-query'
-import { Welcome } from './pages/Welcome';
-import { TRPC_URL } from '@env';
+import React from "react";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 
-export default function App() {
-  const [queryClient] = useState(() => new QueryClient());
-  const [trpcClient] = useState(() =>
-    trpc.createClient({
-      // change the ip address to whatever address the Metro server is running on
-      // if you're using a Simulator 'localhost' should work fine
-      links: [httpBatchLink({ url: TRPC_URL })],
-    }),
-  );
+import { TRPCProvider } from "./utils/api";
 
+const RootLayout = () => {
   return (
-    <trpc.Provider client={trpcClient} queryClient={queryClient}>
-      <QueryClientProvider client={queryClient}>
-        <View style={styles.container}>
-          <Text>Open up App.tsx to start working on your app!</Text>
-          <Welcome />
-          <StatusBar style="auto" />
-        </View>
-      </QueryClientProvider>
-    </trpc.Provider>
+    <TRPCProvider>
+      <SafeAreaProvider>
+        {/*
+          The Stack component displays the current page.
+          It also allows you to configure your screens 
+        */}
+        <Stack
+          screenOptions={{
+            headerStyle: {
+              backgroundColor: "#f472b6",
+            },
+          }}
+        />
+        <StatusBar />
+      </SafeAreaProvider>
+    </TRPCProvider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default RootLayout;
