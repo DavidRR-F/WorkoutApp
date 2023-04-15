@@ -4,8 +4,6 @@ I decided to build a Workout Mobile Application with I new stack of frameworks I
 
 ***Slaps Stack: This baby can fit so much typescript in it!***
 
-Note: I am also building this because I'm stuborn and refuse $20 a month for an app to track my workouts :sweat_smile:
-
 ## Core Concept
 
 Create a Mobile Application that allows users to create workouts and with progressive overload functionality. When the user completes a workout full, increase the number of reps and/or weight used in the exercise specified by the user
